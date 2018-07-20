@@ -3,6 +3,9 @@ pipeline {
 
     stages {
         stage('Build') {
+            tools {
+                maven "M3"
+            }
             steps {
                 echo 'Building..'
                 sh "mvn clean package"
